@@ -41,18 +41,18 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateToCarta, onDiscoverClick }
         */}
 
         {/* Mobile Gradient Overlay for Readability on small devices */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#051945] via-[#051945]/60 to-transparent md:hidden" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#051945]/50 via-transparent to-transparent md:hidden pointer-events-none" />
       </div>
 
       {/* Main Content Area */}
-      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 md:pt-36 lg:pt-40 flex-1 flex flex-col justify-center">
+      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-36 lg:pt-40 flex-1 flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Left Column Spacer: Preserves visual space for the giant beer stein (~55% width on desktop) */}
           <div className="hidden lg:block lg:col-span-6 pointer-events-none min-h-[380px]" aria-hidden="true" />
 
-          {/* Right Column: Live HTML Typography & Interactive Elements */}
-          <div className="lg:col-span-6 flex flex-col items-start text-left space-y-5 sm:space-y-6 lg:pl-4 xl:pl-8 bg-[#051945]/85 md:bg-transparent backdrop-blur-md md:backdrop-blur-none p-5 sm:p-6 md:p-0 rounded-2xl md:rounded-none border border-white/15 md:border-none shadow-2xl md:shadow-none max-w-xl mx-auto lg:mx-0">
+          {/* Right Column: Live HTML Typography & Interactive Elements with High Transparency on Mobile */}
+          <div className="lg:col-span-6 flex flex-col items-start text-left space-y-4 sm:space-y-6 lg:pl-4 xl:pl-8 bg-[#051945]/25 sm:bg-[#051945]/35 md:bg-transparent backdrop-blur-[2px] md:backdrop-blur-none p-4 sm:p-6 md:p-0 rounded-2xl md:rounded-none border border-white/10 md:border-none shadow-xl md:shadow-none max-w-xl mx-auto lg:mx-0">
 
             
             {/* Main Headline reproducing reference with exact typographic hierarchy */}
@@ -68,7 +68,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateToCarta, onDiscoverClick }
             </div>
 
             {/* Subtitle */}
-            <p className="font-sans text-white/95 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-xl text-shadow-sm">
+            <p className="font-sans text-white/95 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
               Cerveza, sabor alemán y buenos momentos en el corazón de Pozas.
             </p>
 
